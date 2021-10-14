@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,53 @@
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="something"><input type="text" class="userInput"/></div>
-    <!--<div class="answer" value="0">0</div>-->
-    <div class="CalcButtons">
-        <button class="number" value="1" onclick="num('1')">1</button>
-        <button class="number" value="2" onclick="num('2')">2</button>
-        <button class="number" value="3" onclick="num('3')">3</button>
-        <button class="number" value="4" onclick="num('4')">4</button>
-        <button class="number" value="5" onclick="num('5')">5</button>
-        <button class="number" value="6" onclick="num('6')">6</button>
-        <button class="number" value="7" onclick="num('7')">7</button>
-        <button class="number" value="8" onclick="num('8')">8</button>
-        <button class="number" value="9" onclick="num('9')">9</button>
-        <button class="number" value="." onclick="num('.')">.</button>
+    <div class="page">
+        <div class="container">
+            <div class="something"><input type="text" class="userInput" id="input" /></div>
+            <!--<div class="answer" value="0">0</div>-->
+            <div class="CalcButtons">
+                <button class="number" value="1" onclick="num('1')">1</button>
+                <button class="number" value="2" onclick="num('2')">2</button>
+                <button class="number" value="3" onclick="num('3')">3</button>
+                <button class="number" value="4" onclick="num('4')">4</button>
+                <button class="number" value="5" onclick="num('5')">5</button>
+                <button class="number" value="6" onclick="num('6')">6</button>
+                <button class="number" value="7" onclick="num('7')">7</button>
+                <button class="number" value="8" onclick="num('8')">8</button>
+                <button class="number" value="9" onclick="num('9')">9</button>
+                <button class="number" value="0" onclick="num('0')">0</button>
+                <button class="number" value="." onclick="num('.')">.</button>
 
-        <button class="function" value="+" onclick="num('+')">+</button>
-        <button class="function" value="-" onclick="num('+')">-</button>
-        <button class="function" value="/" onclick="num('/')">/</button>
-        <button class="function" value="*" onclick="num('*')">*</button>
+                <div class="funbox">
+                    <button class="function" value="+" onclick="num('+')">+</button>
+                    <button class="function" value="-" onclick="num('+')">-</button>
+                    <button class="function" value="/" onclick="num('/')">/</button>
+                    <button class="function" value="*" onclick="num('*')">*</button>
 
-        <!--------not sure about these yet---------->
-        <button class="function" value="=" onclick="calculateBOI()">=</button>
-        <input type="button" value="C" onclick="(input.value = '')"/>
-        <!--<button class="function" onclick="clear()">CC</button>-->
+                    <!--------not sure about these yet---------->
+                    <button class="function" value="=" onclick="calculateBOI()">=</button>
+                    <input class="function" type="button" id="clear" value="C" onclick="(input.value = '')" />
+                    <!--<button class="function" onclick="clear()">CC</button>-->
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="thisIsHistory">
+            <h1>History</h1>
+            <button class="clearHistory" value="CH" onclick="clearHist()">Clear History</button>
+            <div class="historyBox" id="foo"></div>
+            <!--<input type="text" class="historyInput"/>-->
+        </div>
+
     </div>
-
-</div>
-
-
-<div class="thisIsHistory">
-        <h1>History</h1>
-        <button class="clearHistory" value="CH" onclick="clearHist()">Clear History</button>
-        <div class="historyBox" id="foo"></div>
-<!--<input type="text" class="historyInput"/>-->
-    </div>
-
-
 
 
 
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>

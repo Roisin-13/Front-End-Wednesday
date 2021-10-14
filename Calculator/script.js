@@ -7,7 +7,7 @@ let calcArray = [];
 
 
 function num(theNumber) {
-    input.value +=theNumber;
+    input.value += theNumber;
     input.innerHTML += theNumber;
     console.log(input.value);
 }
@@ -18,25 +18,27 @@ function calculateBOI() {
     let foo = input.value;
     let calculate = eval(foo);
     input.value = calculate;
-   console.log(calculate);
-   console.log(typeof(input.value));
+    console.log(calculate);
+    console.log(typeof (input.value));
 
 
-   let string1 = foo;
+    let string1 = foo;
     calcArray.push(string1);
     calcArray.push("=");
     let string2 = calculate;
     calcArray.push(string2);
 
-   let displayHistory = document.createElement("div");
+    let displayHistory = document.getElementById("foo");
 
-   let history = document.createElement("div");
-   let br = document.createElement("br"); 
-   displayHistory.appendChild(history);
-   displayHistory.appendChild(br);
-   historyInput.innerHTML = history.textContent = `${calcArray.join(" ")}`;
-   console.log(calcArray);
-   
+    let history = document.createElement("p");
+
+    let text = document.createTextNode(`${calcArray.join(" ")}`);
+
+    history.appendChild(text);
+    displayHistory.appendChild(history);
+
+    console.log(calcArray);
+    console.log(typeof (calcArray));
 }
 
 function clearHist() {
@@ -44,13 +46,13 @@ function clearHist() {
     foo.innerHTML = "";
 }
 
-/* don't know why he refuses to work
-function clear() {
-    //let newString = "";
-    input.value = "";
-    console.log(input.value);
-}
-*/
+
+document.getElementById("clear").addEventListener("click",
+    function clear() {
+        calcArray.length = 0;
+        console.log(calcArray);
+    });
+
 
 
 

@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+.container{
+    border: 1px solid black;
+    border-radius: 15%;
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    width: 300px;
+    height: fit-content;
+    display: block;
+}
+.something{
+    align-items: center;
+    padding: auto;
+}
+.userInput {
+    background-color: grey;
+    height: 50px;
+    margin-left: 50px;
+}
+.CalcButtons {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    width: 200px;
+    height: 250px;
+    display: flexbox;
+    justify-content: space-evenly;
+}
+
+.number {
+    background-color: green;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 10px;
+}
